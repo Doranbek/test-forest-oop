@@ -4,15 +4,15 @@ using System.Text;
 
 namespace ConsoleApp1
 {
-    class AliveObject : ObjectWithLocation
+    abstract class LivingObject : ObjectWithLocation
     {
         public bool Alive { get; private set; } = true;
         public int Age { get; private set; } = 0;
 
-        public AliveObject(byte x, byte y) : base(x, y)
+        public LivingObject(byte x, byte y) : base(x, y)
         {}
 
-        public void Grow() => Age += 1;
+        public virtual void Grow() => Age += Alive ? 1 : 0;
 
         public void Die() => Alive = false;
     }

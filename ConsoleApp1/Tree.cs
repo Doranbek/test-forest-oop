@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApp1
 {
-    class Tree : AliveObject
+    class Tree : LivingObject
     {
         public int Height { get; private set; }
 

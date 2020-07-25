@@ -4,9 +4,9 @@ using System.Text;
 
 namespace ConsoleApp1
 {
-    class MovableObject : AliveObject
+    abstract class MovingObject : LivingObject
     {
-        public MovableObject(byte x, byte y) : base(x, y)
+        public MovingObject(byte x, byte y) : base(x, y)
         {}
 
         public void Move(byte x, byte y)
