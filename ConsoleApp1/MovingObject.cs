@@ -9,8 +9,10 @@ namespace ConsoleApp1
         public MovingObject(byte x, byte y) : base(x, y)
         {}
 
-        public void Move(byte x, byte y)
+        public virtual void Move()
         {
+            byte x = 0;
+            byte y = 0;
             if (Alive) Location = (x, y);
         }
     }

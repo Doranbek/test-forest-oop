@@ -6,7 +6,9 @@
 
         public ObjectWithLocation(byte x, byte y)
         {
-            Location = (x, y);
+            
+           Location = (x, y);
+            
         }
     }
 }

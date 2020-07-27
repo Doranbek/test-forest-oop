@@ -8,5 +8,12 @@
         {
             Height = height;
         }
+
+        public override void Grow()
+        {
+            if (Age < 20) base.Grow();
+            else Die();
+            Height++; // деревья растет каждый год
+        }
     }
 }

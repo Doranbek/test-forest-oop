@@ -7,10 +7,20 @@ namespace ConsoleApp1
         public Animal(byte x, byte y) : base(x, y)
         {}
 
-        public new void Move(byte x, byte y)
+        public override void Move()
         {
-            if (Math.Abs(Location.x - x) <= 1 && Math.Abs(Location.y - y) <= 1)
-                base.Move(x, y);
+            byte x = 0;
+            byte y = 0;
+            Random ran = new Random();
+            x += (byte)ran.Next(1, 3);
+            Random ran1 = new Random();
+            y += (byte)ran1.Next(0, 2);
+            if (Alive) Location = (x, y);
+        }
+        public override void Grow()
+        {
+            if (Age < 10) base.Grow();
+            else Die();
         }
     }
 }
